@@ -6,6 +6,19 @@
     <title>Program Library | CIRCULAR ROOTS COACHING</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration with Custom Olive Color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Custom olive green color
+                        olive: '#A3B43C', 
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         /* Using Inter font stack (default in Tailwind) for modern look */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -65,6 +78,10 @@
             margin-bottom: 0.5rem;
             display: block;
         }
+        /* Custom modal transition for smooth appearance */
+        .modal-transition {
+            transition: opacity 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-black text-white antialiased">
@@ -105,8 +122,8 @@
             <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-6 uppercase max-w-4xl">
                 ACHIEVE REAL RESULTS, WITH ZERO GUESSWORK.
             </h1>
-            <!-- H2 remains: Proven Programs, Simplified Execution -->
-            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-10 uppercase max-w-5xl text-green-500">
+            <!-- H2: Now uses custom olive color -->
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-10 uppercase max-w-5xl text-olive">
                 PROVEN PROGRAMS, SIMPLIFIED EXECUTION.
             </h2>
             <!-- BOLD ITALIC TEXT: Copy is supportive and clear. -->
@@ -189,7 +206,7 @@
 
                     <!-- Feature B: Equipment & Time Flexibility -->
                     <div>
-                        <span class="feature-icon text-black">⌚</span>
+                        <span class="feature-icon text-black">⌚️</span>
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">Programs Built for Every Environment</h3>
                         <p class="text-lg">Find programs optimized for a fully equipped gym, minimal home setups, or even just bodyweight training. Filter the library by required equipment and duration (e.g., 3-day split, 5-day cycle) to ensure the program fits your life, not the other way around.</p>
                     </div>
@@ -199,7 +216,8 @@
 
         <!-- CTA 3: Mid-Point Check-in (Re-engages after detailing services) - Copy is punchy and assertive -->
         <section class="bg-black text-white py-12 px-4 sm:px-6 text-center border-t border-b border-white">
-            <h4 class="text-xl font-bold mb-4 uppercase text-green-500">Cut the guesswork. Commit to a plan.</h4>
+            <!-- H4: Now uses custom olive color -->
+            <h4 class="text-xl font-bold mb-4 uppercase text-olive">Cut the guesswork. Commit to a plan.</h4>
             <a href="#pricing" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
                 I WANT A STRUCTURED PLAN
             </a>
@@ -259,8 +277,8 @@
                 <p class="text-xl font-semibold italic mb-10">
                     Find the perfect program for your specific goals, available now on our dedicated app.
                 </p>
-                <!-- Final CTA Button -->
-                <a href="https://yourlinkhere.com/library" class="cta-button inline-block px-16 py-6 font-extrabold text-2xl uppercase tracking-widest rounded-xl">
+                <!-- Final CTA Button - UPDATED LINK to trigger modal -->
+                <a href="#" id="open-modal-btn" class="cta-button inline-block px-16 py-6 font-extrabold text-2xl uppercase tracking-widest rounded-xl">
                     EXPLORE THE LIBRARY & PRICING
                 </a>
             </div>
@@ -271,7 +289,7 @@
     <footer class="p-10 bg-black text-neutral-400 border-t border-white/20">
         <div class="max-w-4xl mx-auto text-center">
             <p class="text-xs mb-6 leading-relaxed">
-                General Fitness Disclaimer: Always consult your medical professional or doctor before you begin any new fitness regime or make changes to your diet. This Program Library provides structured training templates for self-paced use and does not constitute 1-1 coaching or medical advice. You engage in physical activity at your own risk.
+                General Fitness Disclaimer: Always consult your medical professional or doctor before you begin any fitness regime or make changes to your diet. This Program Library provides structured training templates for self-paced use and does not constitute 1-1 coaching or medical advice. You engage in physical activity at your own risk.
             </p>
             
             <p class="text-sm font-semibold text-white mb-2">
@@ -284,6 +302,45 @@
         </div>
     </footer>
 
+    <!-- COMING SOON MODAL STRUCTURE - STYLED TO MATCH DARK THEME -->
+    <div id="coming-soon-modal" class="modal-transition fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none">
+        <!-- MODAL CARD: Changed to dark background and white border/text -->
+        <div class="relative w-full max-w-lg p-8 bg-neutral-900 text-white rounded-xl shadow-2xl border-4 border-white transform transition-transform duration-300 scale-95">
+            <!-- Close Button: Hover effect uses custom olive color -->
+            <button id="close-modal-btn" class="absolute top-3 right-3 text-white hover:text-olive transition-colors" aria-label="Close">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <div class="text-center">
+                <span class="text-6xl mb-4 block" role="img" aria-label="Clock">⏳</span>
+                <!-- Heading: Changed text color to white -->
+                <h3 class="text-4xl font-black uppercase mb-4 text-white">
+                    COMING SOON!
+                </h3>
+                <!-- Italic Text: Changed text color to neutral-400 (light gray) -->
+                <p class="text-xl font-semibold italic mb-6 text-neutral-400">
+                    The Online Program Library is launching very soon.
+                </p>
+                <p class="text-lg mb-8">
+                    Thank you for your interest! We are finalizing the last details and ensuring a seamless experience within the dedicated training app.
+                </p>
+                <!-- Bold Text: Now uses custom olive color -->
+                <p class="text-md font-bold text-olive">
+                    Follow us on social media for the official launch date announcement!
+                </p>
+                
+                <!-- NEW CONTACT LINK ADDED HERE -->
+                <p class="mt-4 text-sm text-neutral-400">
+                    Have a question right now? 
+                    <a href="mailto:circularrootscoaching@gmail.com" class="underline font-bold text-white hover:text-olive transition-colors">
+                        Contact us directly
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL STRUCTURE -->
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Set dynamic copyright year
@@ -292,14 +349,68 @@
                 yearSpan.textContent = new Date().getFullYear();
             }
 
-            // JavaScript to handle smooth scrolling for all internal anchor links (#pricing)
-            document.querySelectorAll('a[href="#pricing"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault(); // Stop default link behavior
+            // MODAL LOGIC
+            const modal = document.getElementById('coming-soon-modal');
+            const openBtn = document.getElementById('open-modal-btn');
+            const closeBtn = document.getElementById('close-modal-btn');
+            const modalContent = modal.querySelector('div:nth-child(1)'); // The inner card
 
-                    const targetElement = document.getElementById('pricing');
+            // Function to show the modal
+            const showModal = (e) => {
+                e.preventDefault(); // Prevent scroll to top if using '#'
+                modal.classList.remove('pointer-events-none', 'opacity-0');
+                modal.classList.add('opacity-100');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling background
+            };
+
+            // Function to hide the modal
+            const hideModal = () => {
+                modal.classList.remove('opacity-100');
+                modal.classList.add('opacity-0');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                document.body.style.overflow = ''; // Restore background scrolling
+                // Wait for transition to end before making it non-interactive
+                setTimeout(() => {
+                    if (modal.classList.contains('opacity-0')) {
+                        modal.classList.add('pointer-events-none');
+                    }
+                }, 300);
+            };
+
+            // Event Listeners
+            if (openBtn) openBtn.addEventListener('click', showModal);
+            if (closeBtn) closeBtn.addEventListener('click', hideModal);
+
+            // Close modal when clicking outside of the content area
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    hideModal();
+                }
+            });
+
+            // Close modal on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('opacity-100')) {
+                    hideModal();
+                }
+            });
+
+
+            // JavaScript to handle smooth scrolling for all internal anchor links (#pricing)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    // Only prevent default if it's not the modal button or a button targeting a hash
+                    if (this.getAttribute('id') !== 'open-modal-btn') {
+                         e.preventDefault(); 
+                    }
+                   
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
                     if (targetElement) {
-                        // Use scrollIntoView with smooth behavior
                         targetElement.scrollIntoView({
                             behavior: 'smooth'
                         });
