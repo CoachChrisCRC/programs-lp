@@ -105,6 +105,29 @@
         .modal-transition {
             transition: opacity 0.3s ease-in-out;
         }
+
+        /* NEW: Arrow Animation */
+        @keyframes bounce-scroll {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .animated-scroll-arrow {
+            animation: bounce-scroll 2s infinite;
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .animated-scroll-arrow:hover {
+            transform: scale(1.1) translateY(-2px);
+        }
     </style>
 </head>
 <body class="bg-black text-white antialiased">
@@ -138,8 +161,8 @@
                 <a href="#pricing" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold rounded-lg">
                     SEE PROGRAMS
                 </a>
-                <!-- CTA 2: Secondary (Scrolls to Flexible Pricing section #flexible-pricing) -->
-                <a href="#flexible-pricing" class="header-secondary-btn px-4 py-1.5 text-xs uppercase font-extrabold rounded-lg">
+                <!-- CTA 2: Secondary (Scrolls to new Cost Summary section #cost-summary) -->
+                <a href="#cost-summary" class="header-secondary-btn px-4 py-1.5 text-xs uppercase font-extrabold rounded-lg">
                     VIEW PRICING
                 </a>
             </div>
@@ -257,51 +280,107 @@
             </a>
         </section>
         
-        <!-- FEATURE 3: FLEXIBILITY & PRICING (Black Background) - TARGET FOR VIEW PRICING BUTTON -->
+        <!-- FEATURE 3: FLEXIBILITY & PRICING (Black Background) - DETAILED FLEXIBILITY INFO -->
         <section id="flexible-pricing" class="bg-black text-white py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto">
                 <!-- H2 (Point 3): Olive accent on FLEXIBLE PRICING -->
                 <h2 class="section-header-box border-white text-4xl font-extrabold uppercase mb-16 max-w-4xl">
-                    3. 💰 <span class="text-olive">FLEXIBLE PRICING</span>: BUY-ONCE OR SUBSCRIBE.
+                    3. 🤝 ACCESS MODELS: <span class="text-olive">FLEXIBILITY</span> & AUTONOMY.
                 </h2>
                 <!-- BOLD ITALIC TEXT -->
                 <p class="text-2xl font-semibold italic mb-12 text-neutral-400">
                     Choose the access model that best suits your goals and budget—from a single program purchase to full library access.
                 </p>
-                <!-- UPDATED GRID with 4 points -->
+                <!-- GRID with 4 points focusing on the *how* and *why* of the flexibility -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
-                    <!-- Point 1: Single Program Purchase - Only accenting the price (£35+) -->
+                    <!-- Point 1: Single Program Purchase -->
                     <div class="sm:col-span-2 md:col-span-2">
                         <span class="feature-icon text-white">💸</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Single Program Purchase <span class="text-olive">(£35+)</span></h3>
-                        <p class="text-lg">Need to focus on one specific goal, like a 4-week strength block? Purchase any program individually for a one-off fee (starting at £35). You get lifetime access to that program in the app, perfect for those who like to manage their training in focused cycles.</p>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">One-Off Purchase Lifetime Access</h3>
+                        <p class="text-lg">Need to focus on one specific goal, like a 4-week strength block? Purchase any program individually for a one-off fee. You get lifetime access to that program in the app, perfect for those who like to manage their training in focused cycles.</p>
                     </div>
 
-                    <!-- Point 2: Monthly Subscription Access - Only accenting the price (£25 / Month) -->
+                    <!-- Point 2: Monthly Subscription Access -->
                     <div class="sm:col-span-2 md:col-span-2">
                         <span class="feature-icon text-white">🔄</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Full Library Subscription <span class="text-olive">(£25 / Month)</span></h3>
-                        <p class="text-lg">For maximal flexibility and variety, opt for the monthly subscription. This unlocks <b>unlimited access</b> to the entire, growing Program Library, including all future releases and challenging workout packs. Great for users who change goals frequently or need continuous conditioning work.</p>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Subscription for Unlimited Variety</h3>
+                        <p class="text-lg">For maximal flexibility and variety, opt for the monthly subscription. This unlocks <b>unlimited access</b> to the entire, growing Program Library, including all future releases and challenging workout packs.</p>
                     </div>
                     
-                    <!-- Point 3: Sub-feature heading reverted to white -->
+                    <!-- Point 3: Self-Paced -->
                     <div class="sm:col-span-2 md:col-span-2">
                         <span class="feature-icon text-white">🏃</span>
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Self-Paced & Zero Commitment</h3>
                         <p class="text-lg">Run the program on your own schedule. There are no mandatory check-ins, fixed timelines, or coaching calls. This model is built for the motivated individual who wants a proven, high-quality training blueprint they can follow completely on their own schedule.</p>
                     </div>
 
-                    <!-- Point 4: Sub-feature heading reverted to white -->
+                    <!-- Point 4: Coach-Designed -->
                     <div class="sm:col-span-2 md:col-span-2">
                         <span class="feature-icon text-white">🛠️</span>
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Coach-Designed & Always Current</h3>
-                        <p class="text-lg">Every program in the library is personally created by Coach Chris, leveraging years of experience. The library is routinely updated with new programming blocks, new workout packs, and refined exercise selections to ensure you always have cutting-edge, proven training plans.</p>
+                        <p class="text-lg">Every program in the library is personally created by Coach Chris. The library is routinely updated with new programming blocks, new workout packs, and refined exercise selections to ensure you always have cutting-edge, proven training plans.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Final CTA & Sign Up (Isolated Box) - CTA 4: Commitment Phrase -->
+
+        <!-- DEDICATED PRICING SUMMARY & FEATURE RECAP (White Background) - TARGET FOR VIEW PRICING BUTTON -->
+        <section id="cost-summary" class="bg-white text-black py-20 px-4 sm:px-6 border-y border-black">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 max-w-4xl">
+                    <span class="text-olive">PROGRAM ACCESS & COST</span> SUMMARY
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Recap Column -->
+                    <div>
+                        <h3 class="font-black text-3xl uppercase mb-4">What You Get: Program Library Features</h3>
+                        <ul class="space-y-4 text-lg list-disc pl-5 text-neutral-700">
+                            <li>
+                                <span class="font-bold text-black">Dedicated Training App:</span> Seamless tracking, video demonstrations for every exercise, and automatic performance history.
+                            </li>
+                            <li>
+                                <span class="font-bold text-black">Expertly Designed Programs:</span> A growing library of cycles focused on strength, muscle building, and conditioning, optimized for various equipment levels.
+                            </li>
+                            <li>
+                                <span class="font-bold text-black">Self-Paced & Flexible:</span> Zero required check-ins; run the programs on your own schedule with lifetime access options.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Pricing Column -->
+                    <div class="p-6 bg-gray-100 rounded-xl border-4 border-olive">
+                        <h3 class="font-black text-3xl uppercase mb-6 text-center">Flexible Access Options</h3>
+                        
+                        <!-- Pricing Option 1: Subscription -->
+                        <div class="mb-6 p-4 border-b border-black/10">
+                            <p class="text-2xl font-black uppercase text-olive mb-1">Full Library Subscription</p>
+                            <p class="text-5xl font-black text-black">£25 <span class="text-3xl font-normal">/ Month</span></p>
+                            <p class="text-sm text-neutral-600 mt-2">Unlimited access to the entire, growing library and all future content releases. Cancel anytime.</p>
+                        </div>
+
+                        <!-- Pricing Option 2: Single Purchase -->
+                        <div class="p-4">
+                            <p class="text-2xl font-black uppercase text-olive mb-1">Single Program Purchase</p>
+                            <p class="text-5xl font-black text-black">£35 <span class="text-3xl font-normal">+</span></p>
+                            <p class="text-sm text-neutral-600 mt-2">One-off fee for lifetime access to one specific program. Perfect for focused, one-time goals.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scroll to Final CTA Arrow Icon (Black only) -->
+                <div class="text-center mt-16">
+                    <a href="#pricing" class="animated-scroll-arrow">
+                        <!-- Down Arrow SVG - Fixed to Black -->
+                        <svg class="w-12 h-12 text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA & Sign Up (Isolated Box) - CTA 4: Commitment Phrase - ID is #pricing -->
         <section id="pricing" class="bg-black text-white py-20 px-4 sm:px-6 border-t border-white/20">
             <div class="max-w-4xl mx-auto text-center pt-16 pb-16 px-8 bg-neutral-900 border-8 border-white rounded-2xl shadow-2xl">
                 <!-- Final Headline: Olive accent on "elevate your training" -->
@@ -312,7 +391,7 @@
                 <p class="text-xl font-semibold italic mb-10">
                     Find the perfect program for your specific goals, available now on our dedicated app.
                 </p>
-                <!-- Final CTA Button (Olive border) - OPENS MODAL -->
+                <!-- Final CTA Button (Olive border) - OPENS MODAL (ID is open-modal-btn) -->
                 <a href="#" id="open-modal-btn" class="cta-button inline-block px-16 py-6 font-extrabold text-2xl uppercase tracking-widest rounded-xl">
                     EXPLORE THE LIBRARY & PRICING
                 </a>
