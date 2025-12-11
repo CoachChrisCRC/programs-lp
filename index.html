@@ -33,18 +33,22 @@
         /* Custom styles for the high-impact CTA button (Final Sign Up Block) */
         .cta-button {
             transition: all 0.3s ease-in-out;
-            border: 3px solid #000;
+            /* UPDATED: Olive border */
+            border: 3px solid #A3B43C; 
             background-color: #fff;
             color: #000;
-            box-shadow: 6px 6px 0 0 #000; /* Dramatic offset shadow */
+            /* UPDATED: Olive shadow */
+            box-shadow: 6px 6px 0 0 #A3B43C; 
         }
         .cta-button:hover {
-            box-shadow: 2px 2px 0 0 #000;
+            /* UPDATED: Olive hover shadow */
+            box-shadow: 2px 2px 0 0 #A3B43C;
             transform: translate(4px, 4px); /* Shift to simulate button press */
         }
         /* Style for mid-page CTA button */
         .mid-cta-button {
-            border: 2px solid #000;
+            /* UPDATED: Olive border */
+            border: 2px solid #A3B43C;
             background-color: #f3f4f6;
             color: #000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -61,16 +65,35 @@
             padding-bottom: 0.5rem;
             margin-bottom: 2rem;
         }
-        /* Style for the header sign-up button */
+        
+        /* HEADER MAIN SIGN-UP BUTTON (LEAVING AS IS - OLIVE BACKGROUND) */
         .header-signup-btn {
-            border: 2px solid #fff; /* White border for contrast */
-            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+            background-color: #A3B43C; /* Olive background */
+            color: #000; /* Black text for readability on olive */
+            border: 2px solid #000; /* Black border for contrast */
+            box-shadow: 2px 2px 0 0 #000; /* Offset shadow */
             transition: all 0.2s;
         }
         .header-signup-btn:hover {
-            background-color: #f3f4f6;
-            transform: translateY(-1px);
+            background-color: #d0e854; /* Lighter olive on hover */
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0 0 #000;
         }
+
+        /* NEW: Style for the secondary header button (Black/White with Olive Accent) */
+        .header-secondary-btn {
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #A3B43C; /* Olive border */
+            transition: all 0.2s;
+            box-shadow: 1px 1px 0 0 #A3B43C;
+        }
+        .header-secondary-btn:hover {
+            background-color: #1a1a1a;
+            transform: translate(0.5px, 0.5px);
+            box-shadow: 0.5px 0.5px 0 0 #A3B43C;
+        }
+
         /* Style for feature icons to match the bold theme */
         .feature-icon {
             font-size: 3rem; /* Large icon size */
@@ -108,21 +131,29 @@
                     TRAIN UNCNVNTNL
                 </div>
             </div>
-            <!-- CTA 1: Quick Exit -->
-            <a href="#pricing" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold bg-white text-black rounded-lg">
-                SEE PROGRAMS
-            </a>
+            
+            <!-- BUTTONS CONTAINER -->
+            <div class="flex flex-col items-end space-y-2">
+                <!-- CTA 1: Main (Scrolls to final CTA section #pricing) -->
+                <a href="#pricing" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold rounded-lg">
+                    SEE PROGRAMS
+                </a>
+                <!-- CTA 2: Secondary (Scrolls to Flexible Pricing section #flexible-pricing) -->
+                <a href="#flexible-pricing" class="header-secondary-btn px-4 py-1.5 text-xs uppercase font-extrabold rounded-lg">
+                    VIEW PRICING
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section: Focused Text Block (Updated for Program Library) -->
     <section class="min-h-[70vh] flex flex-col items-start justify-center px-4 sm:px-6 py-20 bg-black text-white">
         <div class="max-w-6xl mx-auto w-full">
-            <!-- H1 remains with comma -->
-            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-6 uppercase max-w-4xl">
+            <!-- H1: White text -->
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-6 uppercase max-w-4xl text-white">
                 ACHIEVE REAL RESULTS, WITH ZERO GUESSWORK.
             </h1>
-            <!-- H2: Now uses custom olive color -->
+            <!-- H2: Olive accent -->
             <h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-10 uppercase max-w-5xl text-olive">
                 PROVEN PROGRAMS, SIMPLIFIED EXECUTION.
             </h2>
@@ -137,7 +168,8 @@
         <!-- PREMISE SECTION (White Background - What is it?) -->
         <section class="bg-white text-black py-20 px-4 sm:px-6 border-y border-black">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-black uppercase tracking-tighter max-w-4xl mb-6">
+                <!-- H2: Black text -->
+                <h2 class="text-4xl font-black uppercase tracking-tighter max-w-4xl mb-6 text-black">
                     Structured Fitness, Complete Control.
                 </h2>
                 <!-- UPDATED BOLD ITALIC TEXT for better flow -->
@@ -148,7 +180,7 @@
                 <p class="text-xl font-normal mb-8 max-w-5xl text-neutral-700">
                     Our library contains a growing collection of expertly designed, pre-built training programs. These cycles are laser-focused on goals like building strength, increasing muscle mass, and challenging <b>full-body conditioning</b>. Every program is a self-contained blueprint for a specific goal, delivered instantly and ready to run. This is premium programming, <b>simplified</b> for your schedule.
                 </p>
-                <!-- CTA 2: Captures initial interest -->
+                <!-- CTA 2: Captures initial interest (Olive border) - Scrolls to final CTA section #pricing -->
                 <div class="text-center mt-12">
                     <a href="#pricing" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
                         BROWSE PROGRAMS NOW
@@ -160,8 +192,9 @@
         <!-- FEATURE 1: DEDICATED APP & ACCESS (Black Background) -->
         <section class="bg-black text-white py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto">
+                <!-- H2 (Point 1): Olive accent on DEDICATED APP -->
                 <h2 class="section-header-box border-white text-4xl font-extrabold uppercase mb-16 max-w-4xl">
-                    1. 📱 YOUR TRAINING HOSTED ON A DEDICATED APP.
+                    1. 📱 YOUR TRAINING HOSTED ON A <span class="text-olive">DEDICATED APP</span>.
                 </h2>
                 <!-- BOLD ITALIC TEXT -->
                 <p class="text-2xl font-semibold italic mb-12 text-neutral-400">
@@ -169,14 +202,14 @@
                 </p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-                    <!-- Feature A: Intuitive Program Delivery -->
+                    <!-- Feature A: Sub-feature heading reverted to white -->
                     <div>
                         <span class="feature-icon text-white">⚙️</span>
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Seamless Program Flow & Exercise Demos</h3>
                         <p class="text-lg">View your workouts day by day, track your performance, and log your weights directly within the app. Every exercise in every program includes a clear video demonstration and coaching notes, ensuring correct form and maximizing execution. You know exactly what to do, every time.</p>
                     </div>
 
-                    <!-- Feature B: In-App Progress Tracking - <b> HTML tag used -->
+                    <!-- Feature B: Sub-feature heading reverted to white -->
                     <div>
                         <span class="feature-icon text-white">📈</span>
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Automated Performance Tracking</h3>
@@ -189,22 +222,23 @@
         <!-- FEATURE 2: CONTENT & VARIETY (White Background) -->
         <section class="bg-white text-black py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto">
+                <!-- H2 (Point 2): Olive accent on PROVEN PROGRAMS -->
                 <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 max-w-4xl">
-                    2. 📚 A GROWING LIBRARY OF PROVEN PROGRAMS.
+                    2. 📚 A GROWING LIBRARY OF <span class="text-olive">PROVEN PROGRAMS</span>.
                 </h2>
                 <!-- BOLD ITALIC TEXT -->
                 <p class="text-2xl font-semibold italic mb-12 text-neutral-600">
                     Whether you need a 12-week strength cycle or a month of conditioning work, the library has a solution for your exact training goal.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-                    <!-- Feature A: Variety & Specificity - <b> HTML tag used -->
+                    <!-- Feature A: Sub-feature heading reverted to black -->
                     <div>
                         <span class="feature-icon text-black">🎯</span>
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">Targeted Training Goals (Strength, Muscle, & Endurance)</h3>
                         <p class="text-lg">Choose from programs explicitly designed to maximize <b>Muscle Building</b>, increase <b>Strength</b>, or boost <b>Endurance</b> and cardiovascular fitness. We remove the guesswork by providing focused training phases to help you reach any fitness ambition.</p>
                     </div>
 
-                    <!-- Feature B: Equipment & Time Flexibility -->
+                    <!-- Feature B: Sub-feature heading reverted to black -->
                     <div>
                         <span class="feature-icon text-black">⌚️</span>
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">Programs Built for Every Environment</h3>
@@ -214,20 +248,21 @@
             </div>
         </section>
 
-        <!-- CTA 3: Mid-Point Check-in (Re-engages after detailing services) - Copy is punchy and assertive -->
+        <!-- CTA 3: Mid-Point Check-in (Olive accent) -->
         <section class="bg-black text-white py-12 px-4 sm:px-6 text-center border-t border-b border-white">
-            <!-- H4: Now uses custom olive color -->
             <h4 class="text-xl font-bold mb-4 uppercase text-olive">Cut the guesswork. Commit to a plan.</h4>
+            <!-- CTA 3 Button (Olive border) - Scrolls to final CTA section #pricing -->
             <a href="#pricing" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
                 I WANT A STRUCTURED PLAN
             </a>
         </section>
         
-        <!-- FEATURE 3: FLEXIBILITY & PRICING (Black Background) -->
-        <section class="bg-black text-white py-20 px-4 sm:px-6">
+        <!-- FEATURE 3: FLEXIBILITY & PRICING (Black Background) - TARGET FOR VIEW PRICING BUTTON -->
+        <section id="flexible-pricing" class="bg-black text-white py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto">
+                <!-- H2 (Point 3): Olive accent on FLEXIBLE PRICING -->
                 <h2 class="section-header-box border-white text-4xl font-extrabold uppercase mb-16 max-w-4xl">
-                    3. 💰 FLEXIBLE PRICING: BUY-ONCE OR SUBSCRIBE.
+                    3. 💰 <span class="text-olive">FLEXIBLE PRICING</span>: BUY-ONCE OR SUBSCRIBE.
                 </h2>
                 <!-- BOLD ITALIC TEXT -->
                 <p class="text-2xl font-semibold italic mb-12 text-neutral-400">
@@ -235,28 +270,28 @@
                 </p>
                 <!-- UPDATED GRID with 4 points -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
-                    <!-- Point 1: Single Program Purchase -->
+                    <!-- Point 1: Single Program Purchase - Only accenting the price (£35+) -->
                     <div class="sm:col-span-2 md:col-span-2">
                         <span class="feature-icon text-white">💸</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Single Program Purchase (£35+)</h3>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Single Program Purchase <span class="text-olive">(£35+)</span></h3>
                         <p class="text-lg">Need to focus on one specific goal, like a 4-week strength block? Purchase any program individually for a one-off fee (starting at £35). You get lifetime access to that program in the app, perfect for those who like to manage their training in focused cycles.</p>
                     </div>
 
-                    <!-- Point 2: Monthly Subscription Access - UPDATED PRICE -->
+                    <!-- Point 2: Monthly Subscription Access - Only accenting the price (£25 / Month) -->
                     <div class="sm:col-span-2 md:col-span-2">
                         <span class="feature-icon text-white">🔄</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Full Library Subscription (£25 / Month)</h3>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Full Library Subscription <span class="text-olive">(£25 / Month)</span></h3>
                         <p class="text-lg">For maximal flexibility and variety, opt for the monthly subscription. This unlocks <b>unlimited access</b> to the entire, growing Program Library, including all future releases and challenging workout packs. Great for users who change goals frequently or need continuous conditioning work.</p>
                     </div>
                     
-                    <!-- Point 3: Self-Paced & Non-Coached - Copy is clear -->
+                    <!-- Point 3: Sub-feature heading reverted to white -->
                     <div class="sm:col-span-2 md:col-span-2">
                         <span class="feature-icon text-white">🏃</span>
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Self-Paced & Zero Commitment</h3>
                         <p class="text-lg">Run the program on your own schedule. There are no mandatory check-ins, fixed timelines, or coaching calls. This model is built for the motivated individual who wants a proven, high-quality training blueprint they can follow completely on their own schedule.</p>
                     </div>
 
-                    <!-- Point 4: Program Maintenance & Updates - <b> HTML tag used -->
+                    <!-- Point 4: Sub-feature heading reverted to white -->
                     <div class="sm:col-span-2 md:col-span-2">
                         <span class="feature-icon text-white">🛠️</span>
                         <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Coach-Designed & Always Current</h3>
@@ -269,15 +304,15 @@
         <!-- Final CTA & Sign Up (Isolated Box) - CTA 4: Commitment Phrase -->
         <section id="pricing" class="bg-black text-white py-20 px-4 sm:px-6 border-t border-white/20">
             <div class="max-w-4xl mx-auto text-center pt-16 pb-16 px-8 bg-neutral-900 border-8 border-white rounded-2xl shadow-2xl">
-                <!-- Final Headline -->
-                <p class="text-3xl sm:text-4xl font-black mb-6 uppercase">
-                    Ready to elevate your training with a proven program?
+                <!-- Final Headline: Olive accent on "elevate your training" -->
+                <p class="text-3xl sm:text-4xl font-black mb-6 uppercase text-white">
+                    READY TO <span class="text-olive">ELEVATE YOUR TRAINING</span> WITH A PROVEN PROGRAM?
                 </p>
                 <!-- BOLD ITALIC TEXT -->
                 <p class="text-xl font-semibold italic mb-10">
                     Find the perfect program for your specific goals, available now on our dedicated app.
                 </p>
-                <!-- Final CTA Button - UPDATED LINK to trigger modal -->
+                <!-- Final CTA Button (Olive border) - OPENS MODAL -->
                 <a href="#" id="open-modal-btn" class="cta-button inline-block px-16 py-6 font-extrabold text-2xl uppercase tracking-widest rounded-xl">
                     EXPLORE THE LIBRARY & PRICING
                 </a>
@@ -321,9 +356,6 @@
                 <p class="text-xl font-semibold italic mb-6 text-neutral-400">
                     The Online Program Library is launching very soon.
                 </p>
-                <p class="text-lg mb-8">
-                    Thank you for your interest! We are finalizing the last details and ensuring a seamless experience within the dedicated training app.
-                </p>
                 <!-- Bold Text: Now uses custom olive color -->
                 <p class="text-md font-bold text-olive">
                     Follow us on social media for the official launch date announcement!
@@ -351,13 +383,15 @@
 
             // MODAL LOGIC
             const modal = document.getElementById('coming-soon-modal');
-            const openBtn = document.getElementById('open-modal-btn');
+            // Select the final CTA button by ID
+            const openBtn = document.getElementById('open-modal-btn'); 
             const closeBtn = document.getElementById('close-modal-btn');
             const modalContent = modal.querySelector('div:nth-child(1)'); // The inner card
 
             // Function to show the modal
             const showModal = (e) => {
-                e.preventDefault(); // Prevent scroll to top if using '#'
+                // Only prevent default for the modal open button, which is correctly using href="#"
+                e.preventDefault(); 
                 modal.classList.remove('pointer-events-none', 'opacity-0');
                 modal.classList.add('opacity-100');
                 modalContent.classList.remove('scale-95');
@@ -381,6 +415,7 @@
             };
 
             // Event Listeners
+            // The final CTA button always opens the modal
             if (openBtn) openBtn.addEventListener('click', showModal);
             if (closeBtn) closeBtn.addEventListener('click', hideModal);
 
@@ -399,10 +434,10 @@
             });
 
 
-            // JavaScript to handle smooth scrolling for all internal anchor links (#pricing)
+            // JavaScript to handle smooth scrolling for all internal anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    // Only prevent default if it's not the modal button or a button targeting a hash
+                    // CRITICAL CHECK: Only execute smooth scroll logic for buttons that are NOT the modal opener
                     if (this.getAttribute('id') !== 'open-modal-btn') {
                          e.preventDefault(); 
                     }
@@ -410,7 +445,8 @@
                     const targetId = this.getAttribute('href').substring(1);
                     const targetElement = document.getElementById(targetId);
                     
-                    if (targetElement) {
+                    // Only scroll if a target element exists and the button is not the modal opener
+                    if (targetElement && this.getAttribute('id') !== 'open-modal-btn') {
                         targetElement.scrollIntoView({
                             behavior: 'smooth'
                         });
