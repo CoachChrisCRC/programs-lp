@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Library | CIRCULAR ROOTS COACHING</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        olive: '#A3B43C', 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden; 
+            scroll-padding-top: 5rem; 
+        }
+        .cta-button {
+            transition: all 0.3s ease-in-out;
+            border: 3px solid #A3B43C; 
+            background-color: #fff;
+            color: #000;
+            box-shadow: 6px 6px 0 0 #A3B43C; 
+        }
+        .cta-button:hover {
+            box-shadow: 2px 2px 0 0 #A3B43C;
+            transform: translate(4px, 4px);
+        }
+        .mid-cta-button {
+            border: 2px solid #A3B43C;
+            background-color: #f3f4f6;
+            color: #000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+        }
+        .mid-cta-button:hover {
+            background-color: #fff;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .section-header-box {
+            border-bottom: 2px solid;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .header-signup-btn {
+            background-color: #A3B43C;
+            color: #000;
+            border: 2px solid #000;
+            box-shadow: 2px 2px 0 0 #000;
+            transition: all 0.2s;
+        }
+        .header-signup-btn:hover {
+            background-color: #d0e854;
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0 0 #000;
+        }
+        .header-secondary-btn {
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #A3B43C;
+            transition: all 0.2s;
+            box-shadow: 1px 1px 0 0 #A3B43C;
+        }
+        .header-secondary-btn:hover {
+            background-color: #1a1a1a;
+            transform: translate(0.5px, 0.5px);
+            box-shadow: 0.5px 0.5px 0 0 #A3B43C;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        @keyframes bounce-scroll {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .animated-scroll-arrow {
+            animation: bounce-scroll 2s infinite;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased">
+    <header class="sticky top-0 z-50 bg-black/95 backdrop-blur-sm p-4 border-b border-white/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-left leading-none">
+                <div class="text-xl sm:text-2xl font-black uppercase leading-tight text-white mb-1">ONLINE PROGRAM LIBRARY</div>
+                <div class="text-lg sm:text-xl font-extrabold uppercase leading-tight text-neutral-500">COACH CHRIS</div>
+                <div class="text-sm sm:text-base font-extrabold uppercase leading-tight text-white mb-0.5">CIRCULAR ROOTS COACHING</div>
+                <div class="text-xs font-bold uppercase text-neutral-600 leading-tight">TRAIN UNCNVNTNL</div>
+            </div>
+            <div class="flex flex-col items-end space-y-2">
+                <a href="#pricing" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold rounded-lg">SEE PROGRAMS</a>
+                <a href="#cost-summary" class="header-secondary-btn px-4 py-1.5 text-xs uppercase font-extrabold rounded-lg">VIEW PRICING</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="min-h-[70vh] flex flex-col items-start justify-center px-4 sm:px-6 py-20 bg-black text-white">
+        <div class="max-w-6xl mx-auto w-full">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-6 uppercase max-w-4xl text-white">ACHIEVE REAL RESULTS, WITH ZERO GUESSWORK.</h1>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-10 uppercase max-w-5xl text-olive">PROVEN PROGRAMS, SIMPLIFIED EXECUTION.</h2>
+            <p class="text-xl sm:text-2xl font-semibold italic mt-4 max-w-4xl text-neutral-300">Cut through the confusion of random workouts. Our library delivers structured, progressive programs and challenging plans, professionally designed by experienced coaches and available via our dedicated training app.</p>
+        </div>
+    </section>
+    
+    <main>
+        <section class="bg-white text-black py-20 px-4 sm:px-6 border-y border-black">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-black uppercase tracking-tighter max-w-4xl mb-6">Structured Fitness, Complete Control.</h2>
+                <p class="text-2xl font-semibold italic mb-6 max-w-5xl">This isn't just a collection of random workouts—it's your definitive resource for professional, results-driven fitness. The Program Library is designed for the individual ready to commit to a plan and achieve real, measurable goals without the long-term commitment of 1-1 coaching.</p>
+                <p class="text-xl font-normal mb-8 max-w-5xl text-neutral-700">Our library contains a growing collection of expertly designed, pre-built training programs. These cycles are laser-focused on goals like building strength, increasing muscle mass, and challenging <b>full-body conditioning</b>. Every program is a self-contained blueprint for a specific goal, delivered instantly and ready to run. This is premium programming, <b>simplified</b> for your schedule.</p>
+                <div class="text-center mt-12">
+                    <a href="#pricing" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">BROWSE PROGRAMS NOW</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-black text-white py-20 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-white text-4xl font-extrabold uppercase mb-16 max-w-4xl">1. 📱 YOUR TRAINING HOSTED ON A <span class="text-olive">DEDICATED APP</span>.</h2>
+                <p class="text-2xl font-semibold italic mb-12 text-neutral-400">Say goodbye to confusing PDFs and spreadsheets. Every program is delivered via our robust training app, making execution seamless and tracking simple.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                    <div>
+                        <span class="feature-icon text-white">⚙️</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Seamless Program Flow & Exercise Demos</h3>
+                        <p class="text-lg">View your workouts day by day, track your performance, and log your weights directly within the app. Every exercise in every program includes a clear video demonstration and coaching notes, ensuring correct form and maximizing execution. You know exactly what to do, every time.</p>
+                    </div>
+                    <div>
+                        <span class="feature-icon text-white">📈</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Automated Performance Tracking</h3>
+                        <p class="text-lg">The app automatically tracks your history, making <b>Progressive Overload</b> simple. No more guessing what you lifted last week—the app remembers, so you can focus on beating your previous best. Track lifts, workout scores, body metrics, and consistency all in one place.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white text-black py-20 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 max-w-4xl">2. 📚 A GROWING LIBRARY OF <span class="text-olive">PROVEN PROGRAMS</span>.</h2>
+                <p class="text-2xl font-semibold italic mb-12 text-neutral-600">Whether you need a 12-week strength cycle or a month of conditioning work, the library has a solution for your exact training goal.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                    <div>
+                        <span class="feature-icon text-black">🎯</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">Targeted Training Goals (Strength, Muscle, & Endurance)</h3>
+                        <p class="text-lg">Choose from programs explicitly designed to maximize <b>Muscle Building</b>, increase <b>Strength</b>, or boost <b>Endurance</b> and cardiovascular fitness. We remove the guesswork by providing focused training phases to help you reach any fitness ambition.</p>
+                    </div>
+                    <div>
+                        <span class="feature-icon text-black">⌚️</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">Programs Built for Every Environment</h3>
+                        <p class="text-lg">Find programs optimized for a fully equipped gym, minimal home setups, or even just bodyweight training. Filter the library by required equipment and duration (e.g., 3-day split, 5-day cycle) to ensure the program fits your life, not the other way around.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-black text-white py-12 px-4 sm:px-6 text-center border-t border-b border-white">
+            <h4 class="text-xl font-bold mb-4 uppercase text-olive">Cut the guesswork. Commit to a plan.</h4>
+            <a href="#pricing" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">I WANT A STRUCTURED PLAN</a>
+        </section>
+        
+        <section id="flexible-pricing" class="bg-black text-white py-20 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-white text-4xl font-extrabold uppercase mb-16 max-w-4xl">3. 🤝 ACCESS MODELS: <span class="text-olive">FLEXIBILITY</span> & AUTONOMY.</h2>
+                <p class="text-2xl font-semibold italic mb-12 text-neutral-400">Choose the access model that best suits your goals and budget—from a single program purchase to full library access.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 text-left">
+                    <div class="sm:col-span-2 md:col-span-2">
+                        <span class="feature-icon text-white">💸</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">One-Off Purchase Lifetime Access</h3>
+                        <p class="text-lg">Need to focus on one specific goal, like a 4-week strength block? Purchase any program individually for a one-off fee. You get lifetime access to that program in the app, perfect for those who like to manage their training in focused cycles.</p>
+                    </div>
+                    <div class="sm:col-span-2 md:col-span-2">
+                        <span class="feature-icon text-white">🔄</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Subscription for Unlimited Variety</h3>
+                        <p class="text-lg">For maximal flexibility and variety, opt for the monthly subscription. This unlocks <b>unlimited access</b> to the entire, growing Program Library, including all future releases and challenging workout packs.</p>
+                    </div>
+                    <div class="sm:col-span-2 md:col-span-2">
+                        <span class="feature-icon text-white">🏃</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Self-Paced & Zero Commitment</h3>
+                        <p class="text-lg">Run the program on your own schedule. There are no mandatory check-ins, fixed timelines, or coaching calls. This model is built for the motivated individual who wants a proven, high-quality training blueprint they can follow completely on their own schedule.</p>
+                    </div>
+                    <div class="sm:col-span-2 md:col-span-2">
+                        <span class="feature-icon text-white">🛠️</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Coach-Designed & Always Current</h3>
+                        <p class="text-lg">Every program in the library is personally created by Coach Chris. The library is routinely updated with new programming blocks, new workout packs, and refined exercise selections to ensure you always have cutting-edge, proven training plans.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cost-summary" class="bg-white text-black py-20 px-4 sm:px-6 border-y border-black">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 max-w-4xl"><span class="text-olive">PROGRAM ACCESS & COST</span> SUMMARY</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="font-black text-3xl uppercase mb-4">What You Get: Program Library Features</h3>
+                        <ul class="space-y-4 text-lg list-disc pl-5 text-neutral-700">
+                            <li><span class="font-bold text-black">Dedicated Training App:</span> Seamless tracking, video demonstrations for every exercise, and automatic performance history.</li>
+                            <li><span class="font-bold text-black">Expertly Designed Programs:</span> A growing library of cycles focused on strength, muscle building, and conditioning, optimized for various equipment levels.</li>
+                            <li><span class="font-bold text-black">Self-Paced & Flexible:</span> Zero required check-ins; run the programs on your own schedule with lifetime access options.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-100 rounded-xl border-4 border-olive">
+                        <h3 class="font-black text-3xl uppercase mb-6 text-center">Flexible Access Options</h3>
+                        <div class="mb-6 p-4 border-b border-black/10">
+                            <p class="text-2xl font-black uppercase text-olive mb-1">Full Library Subscription</p>
+                            <p class="text-5xl font-black text-black">£25 <span class="text-3xl font-normal">/ Month</span></p>
+                            <p class="text-sm text-neutral-600 mt-2">Unlimited access to the entire, growing library and all future content releases. Cancel anytime.</p>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-2xl font-black uppercase text-olive mb-1">Single Program Purchase</p>
+                            <p class="text-5xl font-black text-black">£35 <span class="text-3xl font-normal">+</span></p>
+                            <p class="text-sm text-neutral-600 mt-2">One-off fee for lifetime access to one specific program. Perfect for focused, one-time goals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-16">
+                    <a href="#pricing" class="animated-scroll-arrow">
+                        <svg class="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="bg-black text-white py-20 px-4 sm:px-6 border-t border-white/20">
+            <div class="max-w-4xl mx-auto text-center py-16 px-8 bg-neutral-900 border-8 border-white rounded-2xl">
+                <p class="text-3xl sm:text-4xl font-black mb-6 uppercase">READY TO <span class="text-olive">ELEVATE YOUR TRAINING</span> WITH A PROVEN PROGRAM?</p>
+                <p class="text-xl font-semibold italic mb-10">Find the perfect program for your specific goals, available now on our dedicated app.</p>
+                <a href="#" id="open-modal-btn" class="cta-button inline-block px-10 sm:px-16 py-6 font-extrabold text-xl sm:text-2xl uppercase tracking-widest rounded-xl">EXPLORE THE LIBRARY & PRICING</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="p-10 bg-black text-neutral-400 border-t border-white/20">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-xs mb-6 leading-relaxed">General Fitness Disclaimer: Always consult your medical professional or doctor before you begin any fitness regime or make changes to your diet. This Program Library provides structured training templates for self-paced use and does not constitute 1-1 coaching or medical advice. You engage in physical activity at your own risk.</p>
+            <p class="text-sm font-semibold text-white mb-2">&copy; <span id="current-year">2025</span> CIRCULAR ROOTS COACHING | TRAIN UNCNVNTNL. All rights reserved.</p>
+            <p class="text-sm font-medium">Fitter. Stronger. Better.</p>
+        </div>
+    </footer>
+
+    <div id="coming-soon-modal" class="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="relative w-full max-w-lg p-8 bg-neutral-900 text-white rounded-xl shadow-2xl border-4 border-white transform transition-transform duration-300 scale-95">
+            <button id="close-modal-btn" class="absolute top-3 right-3 text-white hover:text-olive transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="text-center">
+                <span class="text-6xl mb-4 block">⏳</span>
+                <h3 class="text-4xl font-black uppercase mb-4">COMING SOON!</h3>
+                <p class="text-xl font-semibold italic mb-6 text-neutral-400">The Online Program Library is launching very soon.</p>
+                <p class="text-md font-bold text-olive">Follow us on social media for the official launch date announcement!</p>
+                <p class="mt-4 text-sm text-neutral-400">Have a question right now? <a href="mailto:circularrootscoaching@gmail.com" class="underline font-bold text-white hover:text-olive">Contact us directly</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+            const modal = document.getElementById('coming-soon-modal');
+            const openBtn = document.getElementById('open-modal-btn'); 
+            const closeBtn = document.getElementById('close-modal-btn');
+            const modalContent = modal.children[0];
+
+            const showModal = (e) => {
+                e.preventDefault(); 
+                modal.classList.remove('pointer-events-none', 'opacity-0');
+                modal.classList.add('opacity-100');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const hideModal = () => {
+                modal.classList.remove('opacity-100');
+                modal.classList.add('opacity-0');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                document.body.style.overflow = '';
+                setTimeout(() => { if (modal.classList.contains('opacity-0')) modal.classList.add('pointer-events-none'); }, 300);
+            };
+
+            if (openBtn) openBtn.addEventListener('click', showModal);
+            if (closeBtn) closeBtn.addEventListener('click', hideModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) hideModal(); });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.getAttribute('id') === 'open-modal-btn') return;
+                    e.preventDefault();
+                    const target = document.getElementById(this.getAttribute('href').substring(1));
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
