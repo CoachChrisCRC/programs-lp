@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Library | CIRCULAR ROOTS COACHING</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        olive: '#606c38', 
+                        'olive-light': '#a3b18a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --brand-olive: #606c38;
+            --brand-obsidian: #0d0e0d;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden; 
+            scroll-padding-top: 5rem;
+            background-color: var(--brand-obsidian);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* Adjusted for Library Light Sections to maintain readability while keeping brand feel */
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .glow-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .glow-circle {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(96, 108, 56, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+
+        .cta-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--brand-olive);
+            color: #fefae0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(96, 108, 56, 0.3);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background: #a3b18a;
+            color: #0d0e0d;
+            box-shadow: 0 12px 40px 0 rgba(96, 108, 56, 0.5);
+        }
+
+        .header-btn-square {
+            border-radius: 8px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .header-signup-btn {
+            background: var(--brand-olive);
+            color: #fefae0;
+            box-shadow: 0 4px 15px rgba(96, 108, 56, 0.3);
+        }
+        .header-signup-btn:hover {
+            background: #a3b18a;
+            color: #0d0e0d;
+            transform: translateY(-2px);
+        }
+
+        .header-pricing-btn {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .header-pricing-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .section-header-box {
+            border-left: 4px solid var(--brand-olive);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .icon-glow {
+            filter: drop-shadow(0 0 8px rgba(96, 108, 56, 0.4));
+        }
+    </style>
+</head>
+<body class="text-white antialiased">
+    <div class="glow-bg">
+        <div class="glow-circle" style="top: -10%; right: -10%;"></div>
+        <div class="glow-circle" style="bottom: 10%; left: -5%;"></div>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-black/70 backdrop-blur-xl p-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-left leading-none">
+                <div class="text-xl sm:text-2xl font-black uppercase leading-tight text-white mb-1 tracking-tighter">PROGRAM LIBRARY</div>
+                <div class="text-lg sm:text-xl font-extrabold uppercase leading-tight text-neutral-400">COACH CHRIS</div>
+                <div class="text-sm sm:text-base font-extrabold uppercase leading-tight text-white mb-0.5">CIRCULAR ROOTS COACHING</div>
+                <div class="text-xs font-bold uppercase text-neutral-500 leading-tight">TRAIN UNCNVNTNL</div>
+            </div>
+            <div class="flex flex-col sm:flex-row items-end sm:items-center gap-2">
+                <a href="#pricing" class="header-btn-square header-signup-btn px-5 py-2 text-xs">PICK A PLAN</a>
+                <a href="#cost-summary" class="header-btn-square header-pricing-btn px-5 py-2 text-xs">PRICING</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="min-h-[85vh] flex flex-col items-start justify-center px-4 sm:px-6 py-20">
+        <div class="max-w-6xl mx-auto w-full relative">
+            <div class="absolute -left-10 top-0 w-1 h-32 bg-olive opacity-50 hidden md:block"></div>
+            <h1 class="text-5xl sm:text-6xl md:text-8xl font-black leading-none mb-6 uppercase max-w-4xl tracking-tighter">YOU BRING THE EFFORT. I’LL BRING THE BLUEPRINT.</h1>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-10 uppercase max-w-5xl text-olive drop-shadow-2xl">Smart, sustainable training for your everyday life.</h2>
+            <p class="text-xl sm:text-2xl font-medium italic mt-4 max-w-4xl text-neutral-400 leading-relaxed">Let’s be honest: random workouts lead to random results. I've built this library to give you the same professional structure my 1-on-1 clients get, but delivered in a way that lets you take the wheel.</p>
+        </div>
+    </section>
+    
+    <main>
+        <section class="relative py-24 px-4 sm:px-6 overflow-hidden">
+            <div class="absolute inset-0 bg-[#fefae0] z-0"></div>
+            <div class="max-w-6xl mx-auto relative z-10">
+                <div class="glass-card-light p-8 md:p-16 rounded-[2.5rem] text-black shadow-2xl">
+                    <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter max-w-4xl mb-8">Professional Gains, Personal Autonomy.</h2>
+                    <p class="text-2xl font-semibold italic mb-8 max-w-5xl text-neutral-800">Think of this as your fitness toolkit—not just a list of exercises, but a roadmap to help you actually reach those goals you've been eyeing.</p>
+                    <p class="text-xl font-normal mb-10 max-w-5xl text-neutral-600 leading-relaxed">The Program Library is for those who are ready to work but don't need a coach holding their hand every single day. I've designed these blocks to be laser-focused: whether you want to move heavy weight, build some serious muscle, or just finally improve your <b>overall conditioning</b>. It's high-level programming, but simplified so you can just show up and execute.</p>
+                    <div class="text-left">
+                        <a href="#pricing" class="bg-[#0d0e0d] text-[#fefae0] hover:bg-olive hover:text-[#fefae0] transition-all inline-block px-10 py-5 font-black text-lg uppercase rounded-2xl shadow-xl">FIND YOUR PROGRAM</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box text-4xl font-extrabold uppercase mb-16 max-w-4xl">1. 📱 A <span class="text-olive">TRAINING APP</span> THAT WORKS FOR YOU.</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="glass-card p-10 rounded-3xl group hover:border-olive/50 transition-all">
+                        <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-6 text-4xl group-hover:scale-110 transition-transform icon-glow">🎯</div>
+                        <h3 class="font-black text-2xl uppercase mb-4 text-white">Videos & Notes for Every Move</h3>
+                        <p class="text-lg text-neutral-400 leading-relaxed">Not sure how to perform a specific lift? Every exercise comes with a clear video demo and my personal coaching notes. It’s like having me in your ear, making sure your form is dialed in.</p>
+                    </div>
+                    <div class="glass-card p-10 rounded-3xl group hover:border-olive/50 transition-all">
+                        <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-6 text-4xl group-hover:scale-110 transition-transform icon-glow">⚡</div>
+                        <h3 class="font-black text-2xl uppercase mb-4 text-white">Watch Your Progress Happen</h3>
+                        <p class="text-lg text-neutral-400 leading-relaxed">The app tracks your history automatically. When you hit the gym, you'll know exactly what you lifted last time, making <b>Progressive Overload</b> a breeze.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#fefae0] text-black py-24 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 max-w-4xl">2. 📚 A LIBRARY THAT <span class="text-olive">KEEPS GROWING</span>.</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white/40 backdrop-blur-sm p-10 rounded-3xl border border-black/5 hover:border-olive transition-all shadow-sm">
+                        <div class="text-5xl mb-6">💪</div>
+                        <h3 class="font-black text-2xl uppercase mb-4">Targeted Performance Tiers</h3>
+                        <p class="text-lg text-neutral-700">From 4-week primers to massive 12-week transformations. Whether you're chasing a 1RM or building a bigger engine, we have the specific blueprint for the job.</p>
+                    </div>
+                    <div class="bg-white/40 backdrop-blur-sm p-10 rounded-3xl border border-black/5 hover:border-olive transition-all shadow-sm">
+                        <div class="text-5xl mb-6">🃏</div>
+                        <h3 class="font-black text-2xl uppercase mb-4">A-Z WOD Packs</h3>
+                        <p class="text-lg text-neutral-700">Need variety? Our A-Z packs provide 26 unique, high-intensity workouts. No linear plan, just show up, pick a letter, and get the work done.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cost-summary" class="bg-[#fefae0] text-black py-24 px-4 sm:px-6 border-t border-black/5">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 max-w-4xl"><span class="text-olive">THE BOTTOM LINE</span></h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="font-black text-3xl uppercase mb-8">Professional Programming</h3>
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <span class="text-olive mr-4 text-2xl">✔</span>
+                                <p class="text-lg leading-relaxed"><span class="font-black text-black">Scaling with You:</span> Access everything from 4-week "blasts" to comprehensive 12-week professional cycles.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-olive mr-4 text-2xl">✔</span>
+                                <p class="text-lg leading-relaxed"><span class="font-black text-black">A-Z Resource:</span> Specialized 26-workout packs for those who crave variety and high-volume conditioning.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-olive mr-4 text-2xl">✔</span>
+                                <p class="text-lg leading-relaxed"><span class="font-black text-black">Lifetime Assets:</span> When you buy a standalone plan, it is yours to keep in the app forever. No expiry.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-olive/20 blur-3xl rounded-full"></div>
+                        <div class="glass-card-light p-10 rounded-[3rem] border-2 border-olive shadow-2xl relative z-10">
+                            <h3 class="font-black text-3xl uppercase mb-8 text-center text-black">Choose your path</h3>
+                            <div class="mb-10 p-6 rounded-2xl bg-black/5 border border-black/5">
+                                <div class="flex justify-between items-start mb-1">
+                                    <p class="text-xl font-black uppercase text-olive tracking-widest">All-Access Sub</p>
+                                    <span class="bg-black text-white text-[10px] font-black px-2 py-1 rounded uppercase">Most Popular</span>
+                                </div>
+                                <p class="text-6xl font-black text-black">£40 <span class="text-2xl font-medium text-neutral-500">/ Month</span></p>
+                                <p class="text-sm text-neutral-600 mt-4 leading-relaxed italic">Complete access to every primer, 12-week block, and A-Z WOD pack. Best for the dedicated trainee.</p>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xl font-black uppercase text-olive mb-1 tracking-widest">Standalone Plans</p>
+                                <p class="text-6xl font-black text-black"><span class="text-2xl font-black align-middle mr-1">FROM</span>£45</p>
+                                <p class="text-sm text-neutral-600 mt-4 leading-relaxed italic">Buy a specific performance block or WOD pack and own the blueprint forever. No recurring commitment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="py-32 px-4 sm:px-6 relative overflow-hidden">
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <div class="glass-card p-12 md:p-20 rounded-[4rem] border-white/20">
+                    <p class="text-4xl md:text-5xl font-black mb-8 uppercase leading-tight tracking-tighter">READY TO <span class="text-olive">TAKE THE NEXT STEP</span> IN YOUR TRAINING?</p>
+                    <p class="text-xl font-semibold italic mb-12 text-neutral-400">Let’s find the right plan for you and get moving.</p>
+                    <a href="#" id="open-modal-btn" class="cta-button inline-block px-12 py-6 font-black text-xl uppercase tracking-widest rounded-3xl shadow-2xl">BROWSE THE LIBRARY</a>
+                </div>
+            </div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-olive/5 rounded-full blur-[100px] -z-10"></div>
+        </section>
+    </main>
+
+    <footer class="p-16 bg-black text-neutral-500 border-t border-white/5">
+        <div class="max-w-5xl mx-auto text-center">
+            <p class="text-xs mb-10 leading-relaxed uppercase tracking-widest max-w-3xl mx-auto opacity-60">Heads up: Please talk to a doctor before starting any new training or diet. This library is a collection of templates for you to follow at your own pace—it’s not 1-on-1 coaching or medical advice.</p>
+            <div class="w-12 h-1 bg-olive/30 mx-auto mb-8"></div>
+            <p class="text-sm font-bold text-white mb-2 tracking-widest uppercase">&copy; <span id="current-year">2026</span> CIRCULAR ROOTS COACHING</p>
+            <p class="text-xs font-black text-neutral-600 tracking-[0.3em] uppercase mb-4">TRAIN UNCNVNTNL</p>
+            <p class="text-sm font-medium text-olive italic">Fitter. Stronger. Better.</p>
+        </div>
+    </footer>
+
+    <div id="coming-soon-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="relative w-full max-w-lg p-12 glass-card rounded-[3rem] border-olive/30 transform transition-transform duration-300 scale-95">
+            <button id="close-modal-btn" class="absolute top-6 right-6 text-neutral-400 hover:text-olive transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="text-center">
+                <div class="text-7xl mb-8 animate-bounce">🌱</div>
+                <h3 class="text-4xl font-black uppercase mb-6 tracking-tighter text-white">SOON!</h3>
+                <p class="text-xl font-semibold italic mb-8 text-neutral-400 leading-relaxed">I'm just putting the finishing touches on the library. It'll be ready for you to dive into very soon.</p>
+                <div class="bg-olive/10 p-6 rounded-2xl mb-8 border border-olive/20">
+                    <p class="text-md font-bold text-olive uppercase tracking-widest">Keep an eye on my socials for the launch date!</p>
+                </div>
+                <p class="text-sm text-neutral-500">Want to chat in the meantime? <a href="mailto:circularrootscoaching@gmail.com" class="underline font-bold text-white hover:text-olive transition-colors">Send me an email</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+            const modal = document.getElementById('coming-soon-modal');
+            const openBtn = document.getElementById('open-modal-btn'); 
+            const closeBtn = document.getElementById('close-modal-btn');
+            const modalContent = modal.children[0];
+
+            const showModal = (e) => {
+                e.preventDefault(); 
+                modal.classList.remove('pointer-events-none', 'opacity-0');
+                modal.classList.add('opacity-100');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const hideModal = () => {
+                modal.classList.remove('opacity-100');
+                modal.classList.add('opacity-0');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                document.body.style.overflow = '';
+                setTimeout(() => { if (modal.classList.contains('opacity-0')) modal.classList.add('pointer-events-none'); }, 300);
+            };
+
+            if (openBtn) openBtn.addEventListener('click', showModal);
+            if (closeBtn) closeBtn.addEventListener('click', hideModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) hideModal(); });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.getAttribute('id') === 'open-modal-btn') return;
+                    e.preventDefault();
+                    const target = document.getElementById(this.getAttribute('href').substring(1));
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
